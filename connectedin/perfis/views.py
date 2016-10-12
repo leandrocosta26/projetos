@@ -6,9 +6,19 @@ def index(request):
 
 def exibir(request,perfil_id):
 	perfil = None
-	if perfil_id == '1' : 
-		perfil = Perfil('leleco', 'leleco@gmail.com', '0000', 'walmart.com')
-	if perfil_id == '2' : 
-		perfil = Perfil('pita', 'pita@gmail.com', '1111', 'walmart.com')
-
+	try:
+		perfil = Perfil.objects.get(id=perfil_id)
+	except Exception as e:
+		perfil = Perfil()
+	
 	return render(request, 'perfil.html', { 'perfil' : perfil})
+
+def search_by_email(request, email):
+	print(email)
+	perfil = None
+	try:
+		perfil = Perfil.objects.get(nome=r'^Gabriel\w+')
+	except Exception as e:
+		perfil = Perfil()
+	
+	return render(request, 'perfil.html', { 'perfil' : perfil})	

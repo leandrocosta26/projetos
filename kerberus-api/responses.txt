@@ -1,1 +1,1 @@
-
+{"error":"BAD_REQUEST","data":{"message":"Invalid UTF-8 middle byte 0x75\n at [Source: org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$UnCloseableInputStream@fd1267c; line: 1, column: 1669] (through reference chain: com.walmart.ras.models.Order[\"shipping\"]->com.walmart.ras.models.Shipping[\"address\"]->com.walmart.ras.models.Address[\"city\"])"}}

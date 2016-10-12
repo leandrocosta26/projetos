@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+import sys
 import requests 
 from requests.auth import HTTPBasicAuth
 
@@ -22,6 +23,6 @@ class kerberus_api(object):
     def get_orders(cls):
         order = [] 
         with open('order.txt', 'r') as order_file :
-            for line in order_file : 
-                order.append(str(line.readline()))
-        return str(order)
+            for line in order_file: 
+                order.append(line.replace('\n',''))
+        return "".join(order)
