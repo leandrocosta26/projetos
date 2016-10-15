@@ -4,10 +4,7 @@
 	<title>ConnectedIn</title>
 </head>
 <body>
-	<h1>Detalhe perfil</h1>
-	<label>Nome : {{ perfil.nome }}</label>
-	<label>Telefone : {{ perfil.telefone }} </label>
-	<label>Email : {{perfil.email }}</label>
-	<label>Nome da Empresa : {{perfil.nome_empresa}} </label>
+	<h1>Detalhe perfil : {{ perfil.nome }}</h1>
+	<a href="{% url 'convidar' perfil.id %}">Convidar</a>
 </body>
 </html>

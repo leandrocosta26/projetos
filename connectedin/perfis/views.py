@@ -1,24 +1,19 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 from perfis.models import *
 
 def index(request):
-	return render(request, "index.html")
+	return render(request, "index.html", { 'perfis' : Perfil.objects.all()})
 
 def exibir(request,perfil_id):
-	perfil = None
-	try:
-		perfil = Perfil.objects.get(id=perfil_id)
-	except Exception as e:
-		perfil = Perfil()
-	
+	perfil = Perfil.objects.get(id=perfil_id)	
 	return render(request, 'perfil.html', { 'perfil' : perfil})
 
-def search_by_email(request, email):
-	print(email)
-	perfil = None
-	try:
-		perfil = Perfil.objects.get(nome=r'^Gabriel\w+')
-	except Exception as e:
-		perfil = Perfil()
-	
-	return render(request, 'perfil.html', { 'perfil' : perfil})	
+def convidar(request, perfil_id):
+	perfil_convidado = Perfil.objects.get(id=perfil_id)
+	perfil_logado = get_perfil_logado(request)
+	perfil_logado.convidar(perfil_convidado)
+	return redirect(index)
+
+def get_perfil_logado(request):
+	return Perfil.objects.get(id=1)
