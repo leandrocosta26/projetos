@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block body %}	
+{% load staticfiles %}	
+<div class="row col-md-12">
+	<div class="col-md">
+	 	<div class="box box-primary">
+			<div class="box-body box-profile">
+			  <img class="profile-user-img img-responsive img-circle" src="{% static "dist/img/user4-128x128.jpg" %}" alt="User profile picture">
+			  
+
+			  <h3 class="profile-username text-center">{{ missing.name }}</h3>
+
+			  <p class="text-muted text-center">{{ missing.age }} ano{{ missing.age|pluralize}}</p>
+
+			  <ul class="list-group list-group-unbordered">
+			    <li class="list-group-item">
+			      <b>Cor do cabelo</b> <a class="pull-right">{{ missing.hair_color }}</a>
+			    </li>
+			    <li class="list-group-item">
+			      <b>Cor dos olhos</b> <a class="pull-right">{{ missing.eye_color }}</a>
+			    </li>
+			    <li class="list-group-item">
+			      <b>Cor da pele</b> <a class="pull-right">{{ missing.skin_color }}</a>
+			    </li>
+			    <li class="list-group-item">
+			      <b>Peso aproximado</b> <a class="pull-right">{{ missing.approximate_weight }}</a>
+			    </li>
+			    <li class="list-group-item">
+			      <b>Altura :</b> <a class="pull-right">{{ missing.height }}</a>
+			    </li>
+			    <li class="list-group-item">
+			      <b>Roupas :</b> <a class="pull-right">{{ missing.cloutes | default:"Bota casaco vermelho, camisa amarela meia verde" }}</a>
+			    </li>
+			    <li class="list-group-item">
+			      <b>Motivo :</b> <a class="pull-right">{{ missing.reason | default:"Usuária de dogras com alto grau de depressão" }}</a>
+			    </li>
+			    <li class="list-group-item">
+			      <b>Endereço :</b> <a class="pull-right address">{{ missing.street }} {{ missing.district }} {{ missing.city }} {{ missing.state }}, {{ missing.country}}</a>
+			    </li>
+			  </ul>
+			  <div id="mapa" style="height: 450px; width: inherit;"></div>
+			  <br/>	
+			  <a class="btn btn-primary btn-block btn-print" href="#">Imprimir</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

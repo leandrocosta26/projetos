@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>ConnectedIn</title>
-</head>
-<body>
-	<h1>Detalhe perfil : {{ perfil.nome }}</h1>
-	<a href="{% url 'convidar' perfil.id %}">Convidar</a>
-</body>
-</html>
+{% extends "base.html" %}
+{% block body %}
+<div class="row">
+	<div class="col-lg-12">
+		<h2 style="margin-top: 0">
+			{{ perfil.nome }}
+		</h2>
+		<address>
+			<strong>{{ perfil.nome_empresa }}</strong><br>
+			<abbr title="Telefone">Tel: </abbr>{{ perfil.telefone }}<br>
+			<a href="mailto:{{ perfil.email }}">
+				{{ perfil.email }}
+			</a><br>
+		</address>
+		{% if ja_eh_contato %}
+			<h5>Contato adicionado</h5>
+		{% else %}	
+			<a href="{% url 'convidar' perfil.id %}">Convidar</a>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

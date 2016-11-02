@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="col-md-12">
+    <form role="form" action="{% url 'registrar_missing'  %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="box box-info">
+            <div class="box-header">
+              <h3 class="box-title">Cadastro de desaparecidos</h3>
+            </div>
+            <div class="box-body">
+
+                <div class="form-group">
+                  <label for="exampleInputFile">Foto do desaparecido</label>
+                  <input type="file" name="image" >
+                </div>
+
+                  <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" name="name" class="form-control" placeholder="Digite o nome">
+                  </div>
+                
+                  <div class="form-group">
+                    <label>Sexo:</label>
+                      <select name="gender" class="form-control">
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Outro</option>
+                      </select>
+                  </div>
+                
+                  <div class="form-group">
+                    <label>Idade :</label>
+                      <input type="text" name="age" class="form-control" placeholder="Digite a idade">
+                  </div>
+                
+                  <div class="form-group">
+                    <label>Cor do cabelo :</label>
+                      <select name="hair_color" class="form-control">
+                        <option>Loiro</option>
+                        <option>Preto</option>
+                        <option>Castanho Claro</option>
+                        <option>Castanho Escuro</option>
+                        <option>Ruivo</option>
+                        <option>Grisalho</option>
+                      </select>
+                  </div>
+                
+                  <div class="form-group">
+                    <label>Cor dos olhos :</label>
+                      <select name="eye_color" class="form-control">
+                        <option>Azul</option>
+                        <option>Preto</option>
+                        <option>Castanho Claro</option>
+                        <option>Castanho Escuro</option>
+                        <option>Verde</option>
+                        <option>Outros</option>
+                      </select>
+                  </div>  
+                
+                  <div class="form-group">
+                    <label>Cor da pele :</label>
+                      <select name="skin_color" class="form-control">
+                        <option>Branca</option>
+                        <option>Parda</option>
+                        <option>Morena Clara</option>
+                        <option>Morena</option>
+                        <option>Negra</option>
+                      </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Altura :</label>
+                    <input type="text" name="height" class="form-control" placeholder="1.80">
+                </div>
+                
+                <div class="form-group">
+                    <label>Peso aproximado :</label>
+                    <input type="text" name="approximate_weight" class="form-control" placeholder="80.00">
+                </div>
+
+
+                <div class="form-group">
+                    <label>Rua :</label>
+                    <input type="text" name="street" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>Bairro :</label>
+                    <input type="text" name="district" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>Cidade :</label>
+                    <input type="text" name="city" class="form-control">
+                </div>
+              
+                <div class="form-group">
+                    <label>Estado :</label>
+                    <input type="text" name="state" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>País :</label>
+                    <input type="text" name="country" class="form-control">
+                </div>
+              
+                <div class="form-group">
+                    <label>Numero aproximado :</label>
+                    <input type="text" name="approximate_number" class="form-control">
+                </div>
+
+                  <div class="form-group">
+                     <label>Roupas que vestia :</label>
+                     <textarea name="cloutes" class="form-control">
+                     </textarea>
+                  </div>
+                    
+                <div class="form-group">
+                    <label>Motivo do desaparecimento :</label>
+                      <textarea name="reason" class="form-control">
+                      </textarea>
+                  </div>
+              </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

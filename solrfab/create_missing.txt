@@ -1,0 +1,1 @@
+Missing.objects.create(name='Maria do rosario', age=15, hair_color='Preto', eye_color='Castanho', height=1.80, skin_color='Pardo', approximate_weight=65.90, user_id=user, street='Rua joaquim fonseca saraiva filho', city='São paulo', country='Brasil', district='Vila Maria', approximate_number=106, gender='M')
