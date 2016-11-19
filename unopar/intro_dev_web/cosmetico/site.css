@@ -15,9 +15,14 @@ header {
 	background-color: #8C4D88;
 }
 
-header h1 {
+h1 {
 	font-size: 30px;
 	color: #F2F2F2;
+}
+
+h2 {
+	font-size: 25px;
+	padding: 15px 0 15px 0;
 }
 
 nav {
@@ -65,4 +70,9 @@ footer {
 	background-color: #8C4D88;
 	text-align: center;
 	padding: 15px;
+}
+
+input, textarea {
+	width: 100%;
+	margin: 10px 0;
 }
