@@ -1,0 +1,68 @@
+body{
+	background-color: #D94EA8;
+	font-family: 'Raleway', sans-serif;
+}
+
+.content {
+	margin: 0 auto;
+	width: 80%;
+}
+
+header {
+	padding: 5px 0 5px 0;
+	text-align: center;
+	height: 40px;
+	background-color: #8C4D88;
+}
+
+header h1 {
+	font-size: 30px;
+	color: #F2F2F2;
+}
+
+nav {
+	text-align: center;
+	padding: 5px 0 5px 0;
+	background-color: #0183D8;
+}
+
+nav ul li {
+	display: inline;
+	margin-right: 15px; 
+}
+
+nav ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: #8C4D88;
+}
+
+.vitrine {
+	background-color: #FFFFFF;
+}
+
+table {
+	margin: 0 auto;	
+	text-align: center;
+}
+
+table tr td {
+	padding: 10px;
+}
+
+.title { 
+	font-style: normal;
+}
+
+.price { 
+	font-style: italic;
+}
+
+footer { 
+	background-color: #8C4D88;
+	text-align: center;
+	padding: 15px;
+}

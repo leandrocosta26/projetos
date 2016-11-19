@@ -64,7 +64,7 @@
          "lineTwo":null,
          "district":"teste",
          "postalCode":"06900000",
-         "city":"Embu-Guaçu",
+         "city":"SP",
          "state":"SP",
          "country":"BRA",
          "type":"BUSINESS",
@@ -80,6 +80,7 @@
       "SHIPPING":3700
    },
    "items":[
+      null,
       {
          "itemId":1185826,
          "skuId":33503,
@@ -172,7 +173,7 @@
             "lineTwo":null,
             "district":"teste",
             "postalCode":"06900000",
-            "city":"Embu-Guaçu",
+            "city":"SP",
             "state":"SP",
             "country":"BRA",
             "type":"BUSINESS",
@@ -187,7 +188,7 @@
             "mask":"384100948484******4848",
             "securityCode":"377E2E8A41F6B5C6B904BF54B7950FAF519343EDD4EED8DF7F09D152F28EF55B58193322BBD5B55E1F62DFAAE8CD432AEFF6D1F0DC1602DBBB31B1B245515CA6D6F197A80DEB613AEF2C7FA7D35F7CF9FFB081882A7E4125036AA611754A7B93910947A94EE303F0F2A8136275D7A9986BC1F38A5F43853D28E276E8B7CDDE217EDC22FF34BAB421825C175DBC84AC3B7B1348BA80EB7414E3905809C3A25310A1FB2082846B891F46B0F14BA700C31284D9F8C771445F98D94A22E69CC998EE34DC723C49DB114564B3B37A4D9B3A1963AA2F545110310E4FEA40A7B15CCF50C7968CE55738FA5668939EAA573950B9C577107AAE931C47F01D5E7B1DE1AD82",
             "holder":{
-               "name":"Sam&#39;s Club de São Paulo",
+               "name":"Leandro Costa",
                "document":"12312343"
             },
             "brand":"HIPERCARD",

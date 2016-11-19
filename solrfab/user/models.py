@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-class UserProfiler(models.Model):
+class Profiler(models.Model):
 
 	def content_file_name(instance, filename):
 		return ("./image/%s/%s" % (instance.user.username, filename))

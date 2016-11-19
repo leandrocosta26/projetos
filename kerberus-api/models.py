@@ -1,6 +1,6 @@
-# -*- coding: UTF-8 -*-
+# -*- encoding: UTF-8 -*-
 import sys
-import requests 
+import requests
 from requests.auth import HTTPBasicAuth
 
 class kerberus_api(object):
@@ -15,14 +15,14 @@ class kerberus_api(object):
         return self.__base_url
 
     def create_order(self, order, header):
-        result = requests.post(self.__base_url, data=order,  headers=header, auth=HTTPBasicAuth(self.__user_auth, self.__pass_auth))
+        result = requests.post(self.__base_url, data=order, headers=header, auth=HTTPBasicAuth(self.__user_auth, self.__pass_auth))
         with open('responses.txt', 'w+') as responses :
             responses.write(result.text)
 
     @classmethod
     def get_orders(cls):
-        order = [] 
+        order = []
         with open('order.txt', 'r') as order_file :
-            for line in order_file: 
+            for line in order_file:
                 order.append(line.replace('\n',''))
         return "".join(order)

@@ -1,14 +1,14 @@
 from django import forms
 from django.contrib.auth.models import User
 
-class UserProfileForm(forms.Form):
+class ProfileForm(forms.Form):
 
 	username = forms.CharField(required=True)
 	image = forms.ImageField()
 
 	def is_valid(self):
 		valid = True
-		if not super(UserProfileForm, self).is_valid():
+		if not super(ProfileForm, self).is_valid():
 			self.adiciona_erro('Dados do usuário invalido')
 			valid = False
 		if User.objects.filter(email=self.username) :
